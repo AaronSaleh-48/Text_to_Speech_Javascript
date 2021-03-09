@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text to Speech</title>
+</head>
+
+<body onload="init()">
+
+    <div class="grid-container">
+        <div class="left">
+            <textarea id="text" style="width: 300px; height: 200px; resize: none; background-color: transparent;"></textarea>
+            <br />
+            <input id="btnSpeak" type="button" value="SPEAK!" onclick="speak()">
+        </div>
+
+        <div class="right">
+            <select id="voices"> 
+                <option value="Select Voice">Select Voice</option>
+            </select>
+            <br/>
+            <br/>
+            <span>Rate of Speaking</span>
+            <input type="range" min="0" , max="6" step="0.6" id="rate" value="3">
+            <br/>
+            <span>Pitch of Speaking</span>
+            <input type="range" min="0" , max="2" step="0.2" id="pitch" value="1">
+            <br/>
+            <span>Volume of Speaking</span>
+            <input type="range" min="0" , max="1" step="0.1" id="volume" value="0.5">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
